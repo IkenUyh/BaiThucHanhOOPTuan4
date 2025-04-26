@@ -1,0 +1,44 @@
+#include"time.cpp"
+int main(){
+    CTime t1; cout<<"t1: "<<t1<<endl;
+    CTime t2(5); cout<<"t2: "<<t2<<endl;
+    CTime t3(30, 45); cout<<"t3: "<<t3<<endl;
+    CTime t4(12, 30, 45); cout<<"t4: " <<t4<<endl;
+    CTime t5(t4); cout<<"t5 (sao chep t4): "<<t5<<endl;
+    cout<<"So luong doi tuong CTime sau khi tao: "<<CTime::GetDem()<<endl;
+    cout<<"\nThong tin chi tiet cua t4:"<<endl;
+    cout<<"Gio: "<<t4.GetGio()<<", Phut: "<<t4.GetPhut()<<", Giay: "<<t4.GetGiay()<<endl;
+    cout<<"\nThay doi thoi gian cua t1:"<<endl;
+    t1.SetGio(10); t1.SetPhut(20); t1.SetGiay(30);
+    cout<<"t1 sau khi thay doi: "<<t1<<endl;
+    CTime t6, t7;
+    cout<<"Nhap thoi gian nhu nhat: "<<endl; cin>>t6;
+    cout<<"Nhap thoi gian thu hai: "<<endl; cin>>t7;
+    cout<<"\nPhep toan cong thoi gian:"<<endl;
+    cout<<t6<<" + "<<t7<<" = "<<t6+t7<<endl;
+    cout<<"\nPhep toan tru thoi gian:"<<endl;
+    cout<<t6<<" - "<<t7<<" = "<<t6-t7<<endl;
+    cout<<"\nPhep toan cong thoi gian voi giay:"<<endl;
+    CTime t8; cout<<"Nhap thoi gian moi: "<<endl; cin>>t8;
+    cout<<"Nhap giay de tinh toan: "; int tmp_s; cin>>tmp_s;
+    cout<<t8<<" + "<<tmp_s<<" giay = "<<t8+tmp_s<<endl;
+    cout<<tmp_s<<" + "<<t8<<" giay = "<<tmp_s+t8<<endl;
+    cout<<"\nPhep toan tru thoi gian voi giay:"<<endl;
+    cout<<t8<<" - "<<tmp_s<<" giay = "<<t8-tmp_s<<endl;
+    cout<<tmp_s<<" - "<<t8<<" giay = "<<tmp_s-t8<<endl;
+    cout<<"\nPhep toan tang/giam thoi gian:"<<endl;
+    CTime t9; cin>>t9;
+    cout<<"thoi gian ban dau: "<<t9<<endl;
+    cout<<"++ thoi gian (cong truoc): "<<++t9<<endl;
+    cout<<"thoi gian ++ (cong sau): "<<t9++<<endl;
+    cout<<"thoi gian sau khi tang: "<<t9<<endl;
+    cout<<"-- thoi gian (tru truoc): "<<--t9<<endl;
+    cout<<"thoi gian -- (tru sau): "<<t9--<<endl;
+    cout<<"thoi gian sau khi giam: "<<t9<<endl;
+    cout<<"\nNhap thoi gian moi cho :" << endl;
+    cout<<"\nSo luong doi tuong CTime truoc khi ket thuc: "<<CTime::GetDem()<<endl;
+    //cout << "Nhan Enter de chay dong ho (hoac Ctrl+C de thoat): ";
+    //cin.get();
+    //displayClock();
+    return 0;
+}
