@@ -1,0 +1,50 @@
+#include"ngay.cpp"
+int main() {
+    cout<<"===== CHUONG TRINH QUAN LY NGAY THANG NAM =====\n";
+    cout<<"1. Khoi tao cac doi tuong CDate:\n";
+    CDate d1;
+    cout<<"- Doi tuong mac dinh d1: "<<d1;
+    CDate d2(15,4,2025);
+    cout<<"- Doi tuong d2(15,4,2025): "<<d2;
+    CDate d3(1,1,2025);
+    cout<<"- Doi tuong d3(1,1,2025): "<<d3;
+    cout<<"So luong doi tuong CDate hien tai: "<<CDate::GetDem()<<"\n\n";
+    cout<<"\n===== THU NGHIEM CAC PHEP TOAN +, -, ++, -- =====\n";
+    CDate d4, d5;
+    cout<<"Nhap ngay thu nhat: "<<endl; cin>>d4;
+    cout<<"Nhap ngay thu hai: "<<endl; cin>>d5;
+    cout<<"Khoang cach giua ngay thu nhat va ngay thu hai: "
+    <<d5-d4<<" ngay\n";
+    CDate d6, temp;
+    cout<<"Nhap ngay moi: "<<endl; cin>>d6;
+    temp=d6;
+    cout<<"Nhap ngay muon them: "; int tmp_d; cin>>tmp_d;
+    cout<<"Ngay sau khi them ngay la: "<<d6+tmp_d;
+    d6=temp;
+    cout<<"Nhap ngay muon giam: "; cin>>tmp_d;
+    cout<<"Ngay sau khi giam ngay la: "<<d6-tmp_d;
+    d6=temp;
+    cout<<"++ Ngay (Ngay sau khi tang truoc): "<<++d6;
+    cout<<"Ngay ++ (Ngay sau khi tang sau): "<<d6++;
+    cout<<"Ngay sau khi tang: "<<d6;
+    cout<<"-- Ngay (Ngay sau khi giam truoc): "<<--d6;
+    cout<<"Ngay -- (Ngay sau khi giam sau): "<<d6--;
+    cout<<"Ngay sau khi giam: "<<d6;
+    cout<<"\n===== TINH LAI SUAT NGAN HANG =====\n";
+    CDate ngayGui;
+    double tienGoc,laiSuat;
+    cout<<"Nhap ngay gui tien:\n";
+    cin>>ngayGui;
+    cout<<"Nhap so tien goc (VND): ";
+    cin>>tienGoc;
+    cout<<"Nhap lai suat nam (%): ";
+    cin>>laiSuat;
+    CDate ngayHienTai;
+    ngayHienTai.ThoiGianHienTai();
+    cout<<"Ngay hien tai: "<<ngayHienTai;
+    double tienLai=ngayGui.LaiSuatNganHang(tienGoc,laiSuat);
+    cout<<"Tong tien nhan duoc: "<<fixed<<setprecision(2)<<(tienGoc+tienLai)<<" VND\n";
+    cout<<"\nSo luong doi tuong CDate cuoi cung: "<<CDate::GetDem()<<"\n";
+    cout<<"===== CHUONG TRINH KET THUC =====\n";
+    return 0;
+}
