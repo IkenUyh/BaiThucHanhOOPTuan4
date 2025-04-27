@@ -203,7 +203,7 @@ CTime operator++(CTime& tg){
     }
     return tg;
 }
-CTime operator++(CTime& tg, int giay){
+CTime operator++(CTime& tg, int){
     CTime temp=tg;
     if(tg.giay<59) tg.giay++;
     else{
@@ -233,7 +233,7 @@ CTime operator--(CTime& tg){
     }
     return tg;
 }
-CTime operator--(CTime& tg, int giay){
+CTime operator--(CTime& tg, int){
     CTime temp=tg;
     if(!tg.gio&&!tg.phut&&!tg.giay){
         cout<<"Khong the giam xuong duoi";
