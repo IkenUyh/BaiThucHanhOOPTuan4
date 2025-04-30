@@ -37,8 +37,8 @@ int main(){
     cout<<"thoi gian sau khi giam: "<<t9<<endl;
     cout<<"\nNhap thoi gian moi cho :" << endl;
     cout<<"\nSo luong doi tuong CTime truoc khi ket thuc: "<<CTime::GetDem()<<endl;
-    //cout << "Nhan Enter de chay dong ho (hoac Ctrl+C de thoat): ";
-    //cin.get();
-    //displayClock();
+    cout << "Nhan Enter de chay dong ho (hoac Ctrl+C de thoat): ";
+    cin.get();
+    displayClock();
     return 0;
 }
